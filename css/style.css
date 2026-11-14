@@ -83,7 +83,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .global-nav ul { display: flex; flex-wrap: wrap; }
 .global-nav a, .global-nav .sub-toggle {
-  display: block; padding: .5em .8em; color: var(--ink); font-weight: 500; font-size: .92rem;
+  display: block; padding: .5em .8em; color: var(--ink); font-weight: 500; font-size: .92rem; white-space: nowrap;
   background: none; border: 0; cursor: pointer; font-family: inherit; letter-spacing: .04em;
 }
 .global-nav a:hover, .global-nav .sub-toggle:hover { color: var(--accent); opacity: 1; }
@@ -156,7 +156,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: clamp(1.9rem, 5.2vw, 3.6rem); line-height: 1.35; letter-spacing: .12em;
   text-shadow: 0 2px 20px rgba(0,0,0,.5);
 }
-.hero-sub { margin: 18px 0 0; font-size: clamp(.95rem, 1.6vw, 1.15rem); letter-spacing: .14em; font-weight: 500; }
+.hero-sub { margin: 18px 0 0; font-size: clamp(.95rem, 1.6vw, 1.15rem); letter-spacing: .14em; font-weight: 500; text-wrap: balance; word-break: auto-phrase; }
+/* スマホ: 見出しが 1 文字だけ折り返さないよう少し詰める */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.75rem; letter-spacing: .06em; }
+}
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 30px; }
 .hero-actions .btn { min-width: 200px; }
 .hero-scroll { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); font-size: .7rem; letter-spacing: .3em; color: rgba(255,255,255,.8); }
@@ -171,7 +175,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* セクション共通 */
 .section { padding: 72px 0; }
 .section-title {
-  font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: .14em;
+  font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: .14em; word-break: auto-phrase;
   line-height: 1.5; margin-bottom: 28px; position: relative; padding-bottom: 16px;
 }
 .section-title::after { content: ""; display: block; width: 48px; height: 3px; background: var(--accent); margin-top: 14px; }
@@ -179,7 +183,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .section-title.is-center::after { margin-inline: auto; }
 .section-title .en { display: block; font-family: var(--font-sans); font-size: .75rem; letter-spacing: .3em; color: var(--accent); margin-bottom: 8px; font-weight: 700; }
 .lead { font-size: 1rem; }
-.lead p { margin-bottom: 1.2em; }
+.lead p { margin-bottom: 1.2em; text-wrap: pretty; }
 .text-center { text-align: center; }
 
 /* トップ: 画像 + テキスト 交互 */
@@ -300,16 +304,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .page-head::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(48,44,38,.9); }
 .crumb { font-size: .8rem; color: rgba(255,255,255,.75); margin-bottom: 10px; }
 .crumb a { color: #fff; }
-.page-head h1 { font-family: var(--font-serif); color: #fff; font-size: clamp(1.6rem, 3.4vw, 2.4rem); letter-spacing: .16em; line-height: 1.4; }
+.page-head h1 { font-family: var(--font-serif); color: #fff; font-size: clamp(1.6rem, 3.4vw, 2.4rem); letter-spacing: .16em; line-height: 1.4; text-wrap: balance; }
 .page-head h1 .en { display: block; font-family: var(--font-sans); font-size: .75rem; letter-spacing: .3em; color: var(--cream); margin-bottom: 6px; }
 .page-body { padding: 56px 0 80px; }
 .page-body > .container > * + *, .page-body > .container--narrow > * + * { margin-top: 48px; }
 .hero-img img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 6px; }
 .prose { font-size: 1rem; }
-.prose h2 { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.4vw, 1.7rem); letter-spacing: .1em; margin: 1.6em 0 .8em; line-height: 1.6; }
+.prose h2 { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.4vw, 1.7rem); letter-spacing: .1em; margin: 1.6em 0 .8em; line-height: 1.6; word-break: auto-phrase; }
 .prose h2:first-child { margin-top: 0; }
-.prose h3 { font-size: 1.1rem; margin: 1.4em 0 .6em; padding-left: 12px; border-left: 4px solid var(--accent); }
-.prose p { margin-bottom: 1.1em; }
+.prose h3 { font-size: 1.1rem; margin: 1.4em 0 .6em; padding-left: 12px; border-left: 4px solid var(--accent); word-break: auto-phrase; }
+.prose p { margin-bottom: 1.1em; text-wrap: pretty; }
 .prose ul { padding-left: 1.3em; list-style: disc; margin-bottom: 1em; }
 .prose ul li { margin-bottom: .2em; }
 .prose .note { color: var(--muted); font-size: .9em; }
@@ -350,6 +354,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .price-list li.is-label { border-bottom: 0; padding-bottom: 0; }
 .price-list li.is-label .name { color: var(--accent-deep); font-weight: 700; }
 .menu-notes { margin-top: 48px; text-align: center; color: var(--muted); font-size: .9rem; }
+@media (min-width: 768px) {
+  /* 最後のカテゴリが左列に単独で残るとき（奇数番目）は 2 列に広げる */
+  .menu-cat:last-of-type:nth-of-type(odd) { grid-column: 1 / -1; }
+  .menu-cat:last-of-type:nth-of-type(odd) .price-list { columns: 2; column-gap: 40px; }
+  .menu-cat:last-of-type:nth-of-type(odd) .price-list li { break-inside: avoid; }
+}
 @media (max-width: 767px) {
   .menu-block { grid-template-columns: 1fr; gap: 24px; }
   .menu-block + .menu-block { margin-top: 44px; }
@@ -359,7 +369,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .course { display: grid; grid-template-columns: 2fr 3fr; gap: 32px 40px; align-items: start; padding: 40px 0; border-top: 1px solid var(--line); }
 .course:first-of-type { border-top: 0; padding-top: 0; }
 .course img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 6px; }
-.course h2 { font-family: var(--font-serif); font-size: 1.5rem; letter-spacing: .08em; line-height: 1.5; }
+.course h2 { font-family: var(--font-serif); font-size: 1.5rem; letter-spacing: .08em; line-height: 1.5; word-break: auto-phrase; }
 .course .course-price { font-size: 1.25rem; font-weight: 700; color: var(--accent); margin: 6px 0 10px; }
 .course h3 { font-size: .95rem; font-weight: 500; color: var(--muted); border: 0; padding: 0; margin: 0 0 16px; line-height: 1.7; }
 .course .course-items { background: var(--paper); border-radius: 6px; padding: 18px 22px; margin-bottom: 16px; }
@@ -380,7 +390,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .sister-card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .sister-card .sister-body { padding: 20px 22px 24px; flex: 1; display: flex; flex-direction: column; }
 .sister-card h2 { font-family: var(--font-serif); font-size: 1.25rem; letter-spacing: .08em; margin-bottom: 8px; }
-.sister-card .sister-desc { font-size: .95rem; margin-bottom: 14px; }
+.sister-card .sister-desc { font-size: .95rem; margin-bottom: 14px; text-wrap: pretty; }
 .sister-card dl { margin: 0 0 16px; font-size: .9rem; }
 .sister-card dt { font-weight: 700; color: var(--ink); }
 .sister-card dt::before { content: "■"; color: var(--accent); margin-right: 4px; font-size: .8em; }
@@ -395,14 +405,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .media-list .tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .1em; padding: .1em .7em; border-radius: 2px; background: var(--brown); color: #fff; flex: 0 0 auto; }
 .media-list .tag.is-link { background: var(--accent); }
 .media-list .media-title { flex: 1 1 320px; }
-.media-list a .media-title::after { content: " ↗"; color: var(--accent); font-size: .85em; }
+.media-list a .media-title::after { content: "\00a0↗"; color: var(--accent); font-size: .85em; }
 
 /* お知らせ一覧 */
 .notice { border: 1px solid var(--line); border-radius: 6px; padding: 24px 28px; background: #fff; }
 .notice + .notice { margin-top: 24px; }
 .notice time { display: inline-block; font-size: .85rem; color: var(--accent-deep); font-weight: 700; letter-spacing: .05em; margin-bottom: 4px; }
-.notice h2 { font-size: 1.2rem; line-height: 1.5; margin-bottom: 14px; }
-.notice-body p { margin-bottom: .8em; }
+.notice h2 { font-size: 1.2rem; line-height: 1.5; margin-bottom: 14px; word-break: auto-phrase; }
+.notice-body p { margin-bottom: .8em; text-wrap: pretty; }
 .notice-body .hours { background: var(--paper); border-radius: 6px; padding: 14px 18px; margin: 12px 0; }
 .notice-body .hours p { margin: 0; }
 .notice-body img { max-width: 420px; width: 100%; border-radius: 6px; margin-top: 10px; }
