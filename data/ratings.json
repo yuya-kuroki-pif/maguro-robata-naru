@@ -1,0 +1,17 @@
+{
+  "google": {
+    "place_id": "",
+    "query": "マグロと炉端 成る 東京都墨田区江東橋4-5-5",
+    "rating": null,
+    "count": null,
+    "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%82%B0%E3%83%AD%E3%81%A8%E7%82%89%E7%AB%AF%20%E6%88%90%E3%82%8B%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A2%A8%E7%94%B0%E5%8C%BA%E6%B1%9F%E6%9D%B1%E6%A9%8B4-5-5",
+    "updated": null
+  },
+  "tabelog": {
+    "score": 3.46,
+    "count": 493,
+    "url": "https://tabelog.com/tokyo/A1312/A131201/13255968/",
+    "asof": "2026-11-14",
+    "note": "食べログの点数・口コミ件数は手入力。店舗ページを見て月1回程度 score / count / asof を更新する"
+  }
+}
