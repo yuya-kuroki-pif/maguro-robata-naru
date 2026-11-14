@@ -1,14 +1,48 @@
 {
   "domain": "maguro-robata-naru.com",
-  "name": "まぐろ炉端 なる",
+  "name": "マグロと炉端 成る",
   "kind": "store",
-  "tagline": "",
-  "address": "",
-  "tel": "",
-  "hours": "",
-  "closed": "",
-  "access": "",
-  "instagram": "",
-  "reservation_url": "",
-  "google_maps_url": ""
+  "tagline": "錦糸町で豪快なマグロ料理と炉端焼きを愉しむ",
+  "catch": "大人が気取らず呑める海鮮炉端",
+  "postal_code": "130-0022",
+  "address": "東京都墨田区江東橋4-5-5 トーア錦糸町1F",
+  "tel": "03-6666-9372",
+  "hours": "月曜日〜金曜日 17:00～23:00(L.O.22:00) / 土曜日・日曜日 13:00～23:00(L.O.22:00) ※状況により早締めさせて頂く可能性がございます",
+  "closed": "不定休",
+  "access": "錦糸町駅徒歩6分",
+  "invoice_registered": true,
+  "instagram": "https://www.instagram.com/magurotorobatanaru",
+  "instagram_id": "magurotorobatanaru",
+  "reservation_url": "https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13255968",
+  "recruit_url": "https://pay-it-forward-corporate.com/recruit/",
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=35.6939247,139.818008",
+  "google_maps_directions_url": "https://maps.google.com/maps/dir//%E3%83%9E%E3%82%B0%E3%83%AD%E3%81%A8%E7%82%89%E7%AB%AF%E6%88%90%E3%82%8B%20%E3%80%92130-0022%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A2%A8%E7%94%B0%E5%8C%BA%E6%B1%9F%E6%9D%B1%E6%A9%8B4-5-5%20%E3%83%88%E3%83%BC%E3%82%A2%E9%8C%A6%E7%B3%B8%E7%94%BA%201F/@35.6939247,139.818008,17z",
+  "google_maps_coords": {
+    "lat": 35.6939247,
+    "lng": 139.818008
+  },
+  "sister_brand": {
+    "name": "マグロスタンダード",
+    "url": "https://maguro-standard.com/"
+  },
+  "operator": {
+    "name": "株式会社Pay it Forward",
+    "url": "https://pay-it-forward-corporate.com/"
+  },
+  "source_site": "https://maguro-robata-naru.com",
+  "pages": [
+    "/",
+    "/story/",
+    "/concept/",
+    "/course/",
+    "/food/",
+    "/drink/",
+    "/table/",
+    "/group/",
+    "/special/",
+    "/sister-store/",
+    "/media/",
+    "/information/",
+    "/privacy/"
+  ]
 }
