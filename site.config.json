@@ -44,5 +44,25 @@
     "/media/",
     "/information/",
     "/privacy/"
+  ],
+  "dns_records": [
+    {
+      "type": "A",
+      "name": "mail",
+      "content": "183.90.246.50",
+      "proxied": false,
+      "note": "旧 Xserver のメールサーバー（切替前の MX 相当を維持）"
+    },
+    {
+      "type": "MX",
+      "name": "@",
+      "content": "mail.maguro-robata-naru.com",
+      "priority": 0
+    },
+    {
+      "type": "TXT",
+      "name": "@",
+      "content": "v=spf1 +a:sv2004.xserver.jp +a:maguro-robata-naru.com +mx include:spf.sender.xserver.jp ~all"
+    }
   ]
 }
