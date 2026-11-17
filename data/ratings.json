@@ -1,11 +1,13 @@
 {
   "google": {
-    "place_id": "",
+    "place_id": "ChIJHeddEcGJGGARC7picDuPt2o",
     "query": "マグロと炉端 成る 東京都墨田区江東橋4-5-5",
-    "rating": null,
-    "count": null,
-    "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%82%B0%E3%83%AD%E3%81%A8%E7%82%89%E7%AB%AF%20%E6%88%90%E3%82%8B%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A2%A8%E7%94%B0%E5%8C%BA%E6%B1%9F%E6%9D%B1%E6%A9%8B4-5-5",
-    "updated": null
+    "rating": 4.7,
+    "count": 2246,
+    "url": "https://maps.google.com/?cid=7689772374209772043&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+    "updated": "2026-11-17",
+    "matched_name": "マグロと炉端 成る",
+    "matched_address": "〒130-0022 東京都墨田区江東橋４丁目５−５ トーア錦糸町マンション 1F"
   },
   "tabelog": {
     "score": 3.46,
